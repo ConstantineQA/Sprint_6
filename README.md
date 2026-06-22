@@ -9,13 +9,15 @@
 ### Перечень файлов
 
 1. conftest.py - фикстуры
-2. pages/main_page.py - локаторы и методы страницы https://qa-scooter.education-services.ru/. Здесь же элементы из шапки
-3. pages/order_page.py - локаторы и методы https://qa-scooter.education-services.ru/order для флоу оформления заказа
-4. tests/test_logo.py - тесты на переходы по клику на логотипы в шапке 
-5. tests/test_questions.py - тесты для проверки соответствия текстов ответов вопросам из блока FAQ
-6. tests/test_order.py - тесты позитивного сценария оформления заказа
-7. allure-report/- отчет о тестировании
-8. requirmements.txt - зависимости
+2. pages/base_page - общие базовые методы
+3. pages/main_page.py - локаторы и методы страницы https://qa-scooter.education-services.ru/. Здесь же элементы из шапки
+4. pages/order_page.py - локаторы и методы https://qa-scooter.education-services.ru/order для флоу оформления заказа
+5. tests/test_logo.py - тесты на переходы по клику на логотипы в шапке 
+6. tests/test_questions.py - тесты для проверки соответствия текстов ответов вопросам из блока FAQ
+7. tests/test_order.py - тесты позитивного сценария оформления заказа
+8. tests/data.py - переменные с текстами ответов на вопросы FAQ
+9. allure-report/- отчет о тестировании
+11. requirmements.txt - зависимости
 
 ### Перечень тестов
 **test_logo.py**
@@ -23,16 +25,7 @@
 2. test_click_logo_ya_samokat - Проверка перехода в текущей вкладке на главную Яндекс Самокат по клику на логотип Самокат
 
 **test_questions.py**
-
-Тесты для всех вопросов из перечня FAQ. проверяется соответствие текстов ответов вопросам из блока FAQ.
-1. test_question_one
-2. test_question_two
-3. test_question_three
-4. test_question_four
-5. test_question_five
-6. test_question_six
-7. test_question_seven
-8. test_question_eight
+1. test_question Проверка соответствия текстов ответов вопросам из блока FAQ.
 
 **test_order.py**
 1. test_add_order - параметризированный тест с наборами тестовых пользовательских данных. Запускается через две точки входа - кнопка Заказать в шапке и на главной сервиса.
