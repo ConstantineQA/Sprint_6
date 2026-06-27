@@ -80,80 +80,8 @@ class MainPage(BasePage):
     def scroll_in_order_button(self):
         self.scroll_to_element(self.CONTAINER_FOR_ORDER_BUTTON)   
     
-    #FAQ
+    # #FAQ
     @allure.step('Скролл главной страницы к аккордиону FAQ')
     def scroll_in_accordion(self):
         self.wait_for_visible(self.ACCORDION_FAQ)
         self.scroll_to_element(self.ACCORDION_FAQ)
-
-    @allure.step('Клик на первый вопрос в FAQ')
-    def click_faq_question_one(self):
-        self.click_element(self.ACCORDION_ITEM_ONE)
-    
-    @allure.step('Клик на второй вопрос в FAQ')
-    def click_faq_question_two(self):
-        self.click_element(self.ACCORDION_ITEM_TWO)
-
-    @allure.step('Клик на третий вопрос в FAQ')
-    def click_faq_question_three(self):
-        self.click_element(self.ACCORDION_ITEM_THREE)
-
-    @allure.step('Клик на четвертый вопрос в FAQ')
-    def click_faq_question_four(self):
-        self.click_element(self.ACCORDION_ITEM_FOUR)
-
-    @allure.step('Клик на пятый вопрос в FAQ')
-    def click_faq_question_five(self):
-        self.click_element(self.ACCORDION_ITEM_FIVE)
-
-    @allure.step('Клик на шестой вопрос в FAQ')
-    def click_faq_question_six(self):
-        self.click_element(self.ACCORDION_ITEM_SIX)
-
-    @allure.step('Клик на седьмой вопрос в FAQ')
-    def click_faq_question_seven(self):
-        self.click_element(self.ACCORDION_ITEM_SEVEN)
-
-    @allure.step('Клик на восьмой вопрос в FAQ')
-    def click_faq_question_eight(self):
-        self.click_element(self.ACCORDION_ITEM_EIGHT)
-    
-    @allure.step('Получить текст ответа первого вопроса')
-    def get_text_answer_one(self):
-        self.wait_for_visible(self.ANSWER_FAQ_ONE, timeout=5)
-        return self.get_text(self.ANSWER_FAQ_ONE)
-    
-    @allure.step('Получить текст ответа второго вопроса')
-    def get_text_answer_two(self):
-        self.wait_for_visible(self.ANSWER_FAQ_TWO, timeout=5)
-        return self.get_text(self.ANSWER_FAQ_TWO)
-    
-    @allure.step('Получить текст ответа третьего вопроса')
-    def get_text_answer_three(self):
-        self.wait_for_visible(self.ANSWER_FAQ_THREE, timeout=5)
-        return self.get_text(self.ANSWER_FAQ_THREE)
-    
-    @allure.step('Получить текст ответа четвертого вопроса')
-    def get_text_answer_four(self):
-        self.wait_for_visible(self.ANSWER_FAQ_FOUR, timeout=5)
-        return self.get_text(self.ANSWER_FAQ_FOUR)
-    
-    @allure.step('Получить текст ответа пятого вопроса')
-    def get_text_answer_five(self):
-        self.wait_for_visible(self.ANSWER_FAQ_FIVE, timeout=5)
-        return self.get_text(self.ANSWER_FAQ_FIVE)
-    
-    @allure.step('Получить текст ответа шестого вопроса')
-    def get_text_answer_six(self):
-        self.wait_for_visible(self.ANSWER_FAQ_SIX, timeout=5)
-        return self.get_text(self.ANSWER_FAQ_SIX)
-    
-    @allure.step('Получить текст ответа седьмого вопроса')
-    def get_text_answer_seven(self):
-        self.wait_for_visible(self.ANSWER_FAQ_SEVEN, timeout=5)
-        return self.get_text(self.ANSWER_FAQ_SEVEN)
-    
-    @allure.step('Получить текст ответа восьмого вопроса')
-    def get_text_answer_eight(self):
-        self.wait_for_visible(self.ANSWER_FAQ_EIGHT, timeout=5)
-        return self.get_text(self.ANSWER_FAQ_EIGHT)
